@@ -18,7 +18,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "851a3783-c59b-4a39-8a35-7d51b0add688"
+				"spark.autotune.trackingId": "ce0d41be-146c-4c07-ba3d-1612b7e5be2b"
 			}
 		},
 		"metadata": {
@@ -32,10 +32,10 @@
 				"name": "csharp"
 			},
 			"a365ComputeOptions": {
-				"id": "/subscriptions/a1a27566-3e3c-42d7-a372-692095cd8521/resourceGroups/SerengetiDataLab/providers/Microsoft.Synapse/workspaces/serengetidatalabqezfaqkj/bigDataPools/defsparkpool",
+				"id": "/subscriptions/a1a27566-3e3c-42d7-a372-692095cd8521/resourceGroups/Blog-Rg/providers/Microsoft.Synapse/workspaces/serengetidatalabw7wrt3gm/bigDataPools/defsparkpool",
 				"name": "defsparkpool",
 				"type": "Spark",
-				"endpoint": "https://serengetidatalabqezfaqkj.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/defsparkpool",
+				"endpoint": "https://serengetidatalabw7wrt3gm.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/defsparkpool",
 				"auth": {
 					"type": "AAD",
 					"authResource": "https://dev.azuresynapse.net"
@@ -67,7 +67,7 @@
 					"#r \"nuget: Microsoft.Azure.Storage.Blob\"\n",
 					"#r \"nuget: Microsoft.Azure.Storage.File\""
 				],
-				"execution_count": 4
+				"execution_count": 1
 			},
 			{
 				"cell_type": "code",
@@ -94,7 +94,7 @@
 					"using Microsoft.Azure.Storage.Auth;\n",
 					"using Microsoft.Spark.Extensions.Azure.Synapse.Analytics.Notebook.MSSparkUtils;"
 				],
-				"execution_count": 5
+				"execution_count": 2
 			},
 			{
 				"cell_type": "code",
@@ -113,12 +113,12 @@
 					"CloudBlobContainer destContainer, sourceContainer;\n",
 					"CloudBlobDirectory destDirectory;\n",
 					"\n",
-					"var vaultName = \"serengetikeyvaultqezfaqk\";\n",
-					"var linkConnectionName = \"\";\n",
+					"var vaultName = \"serengetikeyvaultw7wrt3g\";\n",
+					"var linkConnectionName = \"AzureKeyVault\";\n",
 					"\n",
 					"string destConnectionString = Credentials.GetSecret(vaultName,\"ADLS-ConnectionString\", linkConnectionName);"
 				],
-				"execution_count": 6
+				"execution_count": 3
 			},
 			{
 				"cell_type": "code",
