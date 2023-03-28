@@ -18,24 +18,24 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "ce0d41be-146c-4c07-ba3d-1612b7e5be2b"
+				"spark.autotune.trackingId": "7f22d5fe-f89b-423c-9b7c-08440b6063dc"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
 			"enableDebugMode": false,
 			"kernelspec": {
-				"name": "synapse_sparkdotnet",
-				"display_name": "csharp"
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
 			},
 			"language_info": {
 				"name": "csharp"
 			},
 			"a365ComputeOptions": {
-				"id": "/subscriptions/a1a27566-3e3c-42d7-a372-692095cd8521/resourceGroups/Blog-Rg/providers/Microsoft.Synapse/workspaces/serengetidatalabw7wrt3gm/bigDataPools/defsparkpool",
+				"id": "/subscriptions/a1a27566-3e3c-42d7-a372-692095cd8521/resourceGroups/Serengeti-DataLab/providers/Microsoft.Synapse/workspaces/serengetidatalabwewkgzww/bigDataPools/defsparkpool",
 				"name": "defsparkpool",
 				"type": "Spark",
-				"endpoint": "https://serengetidatalabw7wrt3gm.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/defsparkpool",
+				"endpoint": "https://serengetidatalabwewkgzww.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/defsparkpool",
 				"auth": {
 					"type": "AAD",
 					"authResource": "https://dev.azuresynapse.net"
@@ -67,7 +67,7 @@
 					"#r \"nuget: Microsoft.Azure.Storage.Blob\"\n",
 					"#r \"nuget: Microsoft.Azure.Storage.File\""
 				],
-				"execution_count": 1
+				"execution_count": 13
 			},
 			{
 				"cell_type": "code",
@@ -94,7 +94,7 @@
 					"using Microsoft.Azure.Storage.Auth;\n",
 					"using Microsoft.Spark.Extensions.Azure.Synapse.Analytics.Notebook.MSSparkUtils;"
 				],
-				"execution_count": 2
+				"execution_count": 14
 			},
 			{
 				"cell_type": "code",
@@ -113,12 +113,12 @@
 					"CloudBlobContainer destContainer, sourceContainer;\n",
 					"CloudBlobDirectory destDirectory;\n",
 					"\n",
-					"var vaultName = \"serengetikeyvaultw7wrt3g\";\n",
+					"var vaultName = \"serengetikeyvaultwewkgzw\";\n",
 					"var linkConnectionName = \"AzureKeyVault\";\n",
 					"\n",
 					"string destConnectionString = Credentials.GetSecret(vaultName,\"ADLS-ConnectionString\", linkConnectionName);"
 				],
-				"execution_count": 3
+				"execution_count": 15
 			},
 			{
 				"cell_type": "code",
@@ -156,7 +156,7 @@
 					"    destDirectory = destContainer.GetDirectoryReference(\"metadata\");\n",
 					"}"
 				],
-				"execution_count": 7
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
@@ -197,7 +197,7 @@
 					"    }\n",
 					"}"
 				],
-				"execution_count": 8
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
@@ -240,7 +240,7 @@
 					"}\n",
 					""
 				],
-				"execution_count": 9
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
@@ -295,7 +295,7 @@
 					"}\n",
 					""
 				],
-				"execution_count": 10
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
