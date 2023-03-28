@@ -2,7 +2,7 @@
 	"name": "select",
 	"properties": {
 		"content": {
-			"query": "SELECT * FROM train\n",
+			"query": "SELECT c.name AS category_name, COUNT(*) AS image_count\nFROM images i\nJOIN annotations a ON i.id = a.image_id\nJOIN categories c ON a.category_id = c.id\nWHERE c.id NOT IN (0, 1)\nGROUP BY c.name",
 			"metadata": {
 				"language": "sql"
 			},
