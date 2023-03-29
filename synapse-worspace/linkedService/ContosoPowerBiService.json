@@ -1,0 +1,11 @@
+{
+	"name": "ContosoPowerBiService",
+	"properties": {
+		"annotations": [],
+		"type": "PowerBIWorkspace",
+		"typeProperties": {
+			"workspaceID": "c2deac20-2f02-4294-82c5-249f77e32a4c",
+			"tenantID": "3a2a5ab1-0e75-424a-a12a-892d7e3bbf85"
+		}
+	}
+}
